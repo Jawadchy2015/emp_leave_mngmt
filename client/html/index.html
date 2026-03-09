@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In | Leave Management System</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body class="min-h-screen bg-slate-950 text-white">
+  <div class="relative min-h-screen overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(59,130,246,0.18),_transparent_30%),radial-gradient(circle_at_bottom_right,_rgba(168,85,247,0.16),_transparent_30%)]"></div>
+
+    <div class="relative z-10 flex min-h-screen items-center justify-center px-6 py-10">
+      <div class="grid w-full max-w-6xl overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-2xl backdrop-blur-xl lg:grid-cols-2">
+        
+        <div class="hidden lg:flex flex-col justify-between border-r border-white/10 bg-white/5 p-10">
+          <div>
+            <div class="mb-8 inline-flex items-center rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-sm text-cyan-300">
+              Employee Leave Management System
+            </div>
+
+            <h1 class="text-4xl font-bold leading-tight text-white">
+              Manage leave requests with clarity, control, and speed.
+            </h1>
+
+            <p class="mt-6 max-w-xl text-slate-300">
+              A modern internal platform for employees, managers, and admins to handle leave requests, approvals, balances, and workforce visibility.
+            </p>
+          </div>
+
+          <div class="grid gap-4">
+            <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-5">
+              <h3 class="text-lg font-semibold">Role-based access</h3>
+              <p class="mt-2 text-sm text-slate-400">
+                Separate dashboards and permissions for admin, manager, and employee users.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-5">
+              <h3 class="text-lg font-semibold">Fast approvals</h3>
+              <p class="mt-2 text-sm text-slate-400">
+                Streamline review and decision-making with one centralized workflow.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center p-6 sm:p-10">
+          <div class="w-full max-w-md">
+            <div class="mb-8 text-center">
+              <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-500/15 ring-1 ring-cyan-400/20">
+                <span class="text-2xl font-bold text-cyan-300">LM</span>
+              </div>
+              <h2 class="text-3xl font-bold">Sign in</h2>
+              <p class="mt-2 text-sm text-slate-400">
+                Enter your account credentials to access your dashboard.
+              </p>
+            </div>
+
+            <form id="loginForm" class="space-y-5 rounded-3xl border border-white/10 bg-slate-900/70 p-6 shadow-xl">
+              <div>
+                <label for="username" class="mb-2 block text-sm font-medium text-slate-200">Username</label>
+                <input
+                  id="username"
+                  name="username"
+                  type="text"
+                  placeholder="Enter your username"
+                  class="w-full rounded-xl border border-slate-700 bg-slate-950/80 px-4 py-3 text-white placeholder:text-slate-500 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20"
+                />
+                <p id="usernameError" class="mt-2 hidden text-sm text-red-400"></p>
+              </div>
+
+              <div>
+                <label for="password" class="mb-2 block text-sm font-medium text-slate-200">Password</label>
+                <input
+                  id="password"
+                  name="password"
+                  type="password"
+                  placeholder="Enter your password"
+                  class="w-full rounded-xl border border-slate-700 bg-slate-950/80 px-4 py-3 text-white placeholder:text-slate-500 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20"
+                />
+                <p id="passwordError" class="mt-2 hidden text-sm text-red-400"></p>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full rounded-xl bg-cyan-500 px-4 py-3 font-semibold text-slate-950 transition hover:bg-cyan-400"
+              >
+                Sign In
+              </button>
+
+              <div id="formMessage" class="hidden rounded-xl px-4 py-3 text-sm"></div>
+
+              
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>
